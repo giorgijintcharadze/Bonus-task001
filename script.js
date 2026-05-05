@@ -1,6 +1,6 @@
-let mainbox = document.querySelector("#mainbox");
+let mainBox = document.querySelector("#mainBox");
 
-let myarray = [
+let myArray = [
   "Movie tittleone",
   "Movie tittletwo",
   "Movie tittletree",
@@ -8,16 +8,16 @@ let myarray = [
   "Movie tittlefive",
 ];
 
-let myimg = "assets/svg/Rectangle 2.svg";
+let myImg = "assets/svg/Rectangle 2.svg";
 
-myarray.forEach(function (item) {
+myArray.forEach(function (item) {
   let card = document.createElement("div");
   card.classList.add("movie-card");
   // let img = document.createElement("img");
-  // img.src = myimg;
+  // img.src = myImg;
   // img.alt = item;
 
-  card.innerHTML = `<img src="${myimg}" alt="movietittle">`;
+  card.innerHTML = `<img src="${myImg}" alt="movietittle">`;
 
   let h3 = document.createElement("h3");
   h3.textContent = "Movie tittle";
@@ -30,12 +30,12 @@ myarray.forEach(function (item) {
   // card.appendChild(img);
   card.appendChild(h3);
   card.appendChild(box);
-  mainbox.appendChild(card);
+  mainBox.appendChild(card);
 
   //* set timer
   let timeLeft = 15;
   let timer = setInterval(function () {
-    timeLeft--;
+    timeLeft++;
     box.innerHTML = `Release in: <span style="color: rgba(244, 143, 143, 1)">${timeLeft}s</span>`;
 
     if (timeLeft <= 0) {
